@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>schmendrick | guns.lol</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.2em;
+      margin: 10px 0;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+
+    .links a {
+      display: block;
+      margin: 12px auto;
+      padding: 12px 25px;
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+      transition: 0.3s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff416c;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video class="bg-video" autoplay loop muted playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-hacker-typing-fast-5586/1080p.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Background Music (optional, user must click to hear) -->
+  <audio id="bg-music" loop>
+    <source src="https://files.catbox.moe/o0fx7b.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Main Card Content -->
+  <div class="overlay">
+    <img src="https://i.imgur.com/sV9Hc8t.png" alt="avatar" class="avatar" />
+    <h1>schmendrick</h1>
+    <p>Welcome to my universe.</p>
+    <div class="links">
+      <a href="https://www.instagram.com/benchikh_ziad/?hl=en" target="_blank">Instagram</a>
+      <a href="#" onclick="document.getElementById('bg-music').play()">▶ Play Music</a>
+    </div>
+  </div>
+
+</body>
+</html>
